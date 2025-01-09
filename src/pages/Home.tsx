@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import image1 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h (1).jpg'
 import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-style-tile-.jpg'
 import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg'
+import MapComponent from '../components/MapComponent';
 
 const Home = () => {
   const handleDownload = () => {
@@ -165,7 +166,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Visit Our Showroom</h2>
           <div className="aspect-w-16 aspect-h-9">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596073366!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1645567970544!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.762090823624!2d73.9542139!3d18.5897315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c58c27dd166d%3A0x9e719b4fb20393b3!2sSadhguru%20Tiles!5e0!3m2!1sen!2sin!4v1645567970544!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}

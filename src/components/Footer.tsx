@@ -27,15 +27,21 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>0980101989/7620870603/9011719000</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>info@SadhGuruTiles.com</span>
+                <span>Sadgurutiles@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span>123 Tile Street, Design District</span>
+                <span>
+                      Sr. No. 1/3<br />
+                      Yojana Nagar,<br />
+                      near HP Petrol Pump,<br />
+                      Wagholi-Lohagaon Road,<br />
+                      (Lohagaon) Pune-411047 
+                </span>
               </li>
             </ul>
           </div>
@@ -49,7 +55,7 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white">
                 <Twitter />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.instagram.com/p/DDCzPDQiGhS/?igsh=MWxnMDN6ajZyc3U2Zw==" className="text-gray-400 hover:text-white">
                 <Instagram />
               </a>
             </div>

@@ -22,6 +22,15 @@ const Careers = () => {
     }
   ];
 
+
+  const handleApplyClick = (jobTitle) => {
+    const mailtoLink = `mailto:Sadgurutiles@gmail.com?subject=Application for ${encodeURIComponent(
+      jobTitle
+    )}&body=Dear HR,%0D%0A%0D%0AI am writing to apply for the position of ${encodeURIComponent(jobTitle)}. Please find my resume attached.%0D%0A%0D%0AThank you.%0D%0A%0D%0ABest regards,%0D%0A[Your Name]`;
+
+    window.location.href = mailtoLink;
+  };
+
   return (
     <div className="py-12">
       <div className="container mx-auto px-4">
@@ -48,7 +57,7 @@ const Careers = () => {
                 </span>
               </div>
               <p className="text-gray-600 mb-4">{job.description}</p>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700" onClick={()=>handleApplyClick(job.title)}>
                 Apply Now
               </button>
             </div>
