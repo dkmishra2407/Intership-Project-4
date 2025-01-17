@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Download, ArrowRight, Target, Eye, Compass, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-// import pdf1 from "../../assets/Wall Tiles Catalogue/Stone Cladding.pdf"
-import image1 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h (1).jpg'
-import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-style-tile-.jpg'
-import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg'
-import MapComponent from '../components/MapComponent';
+import image1 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h (1).jpg';
+import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-style-tile-.jpg';
+import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const handleDownload = () => {
-    window.open(pdf1, '_blank');
+    // Adjust the file path to the correct PDF file
+    const pdfPath = '/assets/Wall_Tiles_Catalogue/Stone_Cladding.pdf';
+    window.open(pdfPath, '_blank');
   };
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[600px]">
+      <section className="relative h-[600px]" data-aos="fade-up">
         <img
           src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80"
           alt="Modern bathroom with luxury tiles"
@@ -40,60 +46,52 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-16">
+      <section className="py-16" data-aos="fade-right">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-6">About Sadhguru Tiles</h2>
             <p className="text-gray-600 mb-8">
-              Sadhguru tiles is the place where you can find the sharp vision of marketing, global network and powerful backbone of quality. The company cares the vision to cater world class ceramic tiles. We believe in delivering superior quality of ceramic tiles with a sharp vision on modern technology along with modernized art work.
+              Sadhguru Tiles is the place where you can find the sharp vision of marketing, global network, and powerful backbone of quality. We care about the vision to cater world-class ceramic tiles, delivering superior quality with modern technology and artistic designs.
             </p>
             <p className="text-gray-600">
-              Today, our award winning company is one of the largest retailers of its kind in Pune, Maharashtra, and we offer a wide range of Wall & Floor Tiles, Bath products and Modular Kitchens.
+              Today, our award-winning company is one of the largest retailers of its kind in Pune, Maharashtra, offering a wide range of Wall & Floor Tiles, Bath products, and Modular Kitchens.
             </p>
           </div>
 
           {/* Vision, Mission, Goal Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Eye className="text-blue-600 w-6 h-6" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16" data-aos="fade-left">
+            {[{
+              icon: <Eye className="text-blue-600 w-6 h-6" />, 
+              title: 'Our Vision',
+              description: 'We envision a world where ceramic excellence transforms spaces into timeless realms of innovation, sophistication, and beauty.'
+            }, {
+              icon: <Compass className="text-blue-600 w-6 h-6" />, 
+              title: 'Our Mission',
+              description: 'Deliver unparalleled ceramic solutions blending cutting-edge technology, sustainability, and creativity to inspire elevated lifestyles.'
+            }, {
+              icon: <Target className="text-blue-600 w-6 h-6" />, 
+              title: 'Our Goal',
+              description: 'Set new benchmarks in quality, innovation, global impact, and environmental responsibility in the ceramic industry.'
+            }].map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Our Vision</h3>
-              <p className="text-gray-600">
-                We envision a world where ceramic excellence transcends, transforming spaces into timeless realms of innovation, sophistication, and beauty.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Compass className="text-blue-600 w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
-              <p className="text-gray-600">
-                Our mission is to consistently deliver unparalleled ceramic solutions, blending cutting-edge technology, sustainability, and creativity to inspire elevated lifestyles.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="text-blue-600 w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Our Goal</h3>
-              <p className="text-gray-600">
-                We aim to lead the ceramic industry by setting new benchmarks in quality, innovation, global impact, and environmental responsibility.
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* Company Values */}
-          <div className="bg-gray-50 p-8 rounded-lg">
+          <div className="bg-gray-50 p-8 rounded-lg" data-aos="fade-up">
             <div className="max-w-3xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <Award className="text-blue-600 w-8 h-8 mr-3" />
                 <h3 className="text-2xl font-bold">Company Values</h3>
               </div>
               <p className="text-gray-600 text-center">
-                When it comes to work ethics we take integrity as a prime factor in deciding our values. We take pride in ourselves by calling our organization "Employee First". It is said that "Customer is King", our Client retention ratio signifies the saying. Our wider distribution network ensures timely delivery of all products.
+                At Sadhguru Tiles, integrity is a cornerstone of our work ethics. We prioritize our employees and customers, ensuring a high client retention ratio and timely delivery through a wide distribution network.
               </p>
             </div>
           </div>
@@ -101,27 +99,23 @@ const Home = () => {
       </section>
 
       {/* Featured Collections */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Featured Collections</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Modern Living",
-                image: image1,
-                description: "Contemporary designs for modern spaces"
-              },
-              {
-                title: "Classic Elegance",
-                image: image2,
-                description: "Timeless patterns and textures"
-              },
-              {
-                title: "Outdoor Collection",
-                image: image3,
-                description: "Durable tiles for outdoor spaces"
-              }
-            ].map((collection, index) => (
+            {[{
+              title: 'Modern Living',
+              image: image1,
+              description: 'Contemporary designs for modern spaces'
+            }, {
+              title: 'Classic Elegance',
+              image: image2,
+              description: 'Timeless patterns and textures'
+            }, {
+              title: 'Outdoor Collection',
+              image: image3,
+              description: 'Durable tiles for outdoor spaces'
+            }].map((collection, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg">
                 <img
                   src={collection.image}
@@ -145,15 +139,16 @@ const Home = () => {
       </section>
 
       {/* Catalogue Download */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-16 bg-blue-600" data-aos="fade-right">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Download Our Latest Catalogue
-          </h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Download Our Latest Catalogue</h2>
           <p className="text-white text-lg mb-8">
             Explore our complete collection and find the perfect tiles for your project
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 inline-flex items-center gap-2" onClick={handleDownload}>
+          <button
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 inline-flex items-center gap-2"
+            onClick={handleDownload}
+          >
             <Download size={20} />
             Download Catalogue
           </button>
@@ -161,7 +156,7 @@ const Home = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16">
+      <section className="py-16" data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Visit Our Showroom</h2>
           <div className="aspect-w-16 aspect-h-9">
