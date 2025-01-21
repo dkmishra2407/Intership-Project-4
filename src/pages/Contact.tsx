@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-neutral-950">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
 
