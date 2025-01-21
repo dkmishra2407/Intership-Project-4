@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {HoverImageLinks} from '../components/pdfredirect';
 // Import Images
 import image1 from '../../assets/Tiles Picture/Floor Tiles/Double Charge/Dbl01.jpg';
 import image2 from '../../assets/Tiles Picture/Floor Tiles/Double Charge/Dbl02.jpg';
@@ -69,53 +69,62 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   return (
-    <div className="py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Our Products</h1>
+    <div className="py-12 bg-neutral-950">
+  <div className="container mx-auto px-4">
+    <h1 className="text-4xl font-bold mb-8 text-white">Our Products</h1>
 
-        {/* Filters */}
-        <div className="mb-8">
-          <div className="flex flex-wrap gap-4">
-            {Object.keys(tileCategories).map((category) => (
-              <button
-                key={category}
-                className={`px-4 py-2 rounded-lg ${
-                  activeCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 hover:bg-gray-300'
-                }`}
-                onClick={() => setActiveCategory(category)}
-              >
-                {category.charAt(0).toUpperCase() + category.slice(1).replace(/([A-Z])/g, ' $1')}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {tileCategories[activeCategory]?.map((tile) => (
-            tile.id && tile.name && tile.size && tile.image ? (
-              <div key={tile.id} className="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src={tile.image}
-                  alt={tile.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <span className="text-sm text-blue-600 font-medium">{tile.name}</span>
-                  <h3 className="text-xl font-semibold mt-2">{tile.name}</h3>
-                  <p className="text-gray-600 mt-2">{tile.size}</p>
-                  <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-                    View Details
-                  </button>
-                </div>
-              </div>
-            ) : null
-          ))}
-        </div>
+    {/* Filters */}
+    <div className="mb-8">
+      <div className="flex flex-wrap gap-4">
+        {Object.keys(tileCategories).map((category) => (
+          <button
+            key={category}
+            className={`px-4 py-2 rounded-lg ${
+              activeCategory === category
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 hover:bg-gray-300'
+            }`}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1).replace(/([A-Z])/g, ' $1')}
+          </button>
+        ))}
       </div>
     </div>
+
+    {/* Products Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 bg-neutral-950">
+      {tileCategories[activeCategory]?.map((tile) => (
+        tile.id && tile.name && tile.size && tile.image ? (
+          <div 
+            key={tile.id} 
+            className="bg-neutral-900 rounded-lg overflow-hidden border-2 border-blue-500/30 hover:border-blue-500 transition-colors duration-300 shadow-lg shadow-blue-500/10"
+          >
+            <div className="relative">
+              <img
+                src={tile.image}
+                alt={tile.name}
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent"/>
+            </div>
+            <div className="p-6 bg-neutral-900">
+              <span className="text-sm text-blue-400 font-medium">{tile.name}</span>
+              <h3 className="text-xl font-semibold text-white mt-2">{tile.name}</h3>
+              <p className="text-gray-400 mt-2">{tile.size}</p>
+              <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                View Details
+              </button>
+            </div>
+          </div>
+        ) : null
+      ))}
+    </div>
+    <HoverImageLinks />
+    <div>
+    </div>
+  </div>
+</div>
   );
 };
 

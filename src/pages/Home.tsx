@@ -6,7 +6,7 @@ import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-s
 import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { SwipeCards } from '../components/cards';
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -153,6 +153,10 @@ const Home = () => {
             Download Catalogue
           </button>
         </div>
+      </section>
+
+      <section className='py-16' data-aos='fade-up'>
+        <SwipeCards />
       </section>
 
       {/* Map Section */}
