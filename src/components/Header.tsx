@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Home } from 'lucide-react';
-import { Link as ScrollLink } from 'react-scroll';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,14 +17,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-white hover:text-blue-400">Home</Link>
-            <ScrollLink
-              to="AboutUs"
-              smooth={true}
-              duration={500}
-              className="text-white hover:text-blue-400"
-            >
-              About Us
-            </ScrollLink>
+            <Link to="/aboutus" className="block text-white hover:text-blue-400">About Us</Link>
             <Link to="/products" className="text-white hover:text-blue-400">Products</Link>
             <Link to="/contact" className="text-white hover:text-blue-400">Contact</Link>
             <Link to="/careers" className="text-white hover:text-blue-400">Careers</Link>
@@ -44,14 +36,7 @@ const Header = () => {
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4">
             <Link to="/" className="block text-white hover:text-blue-400">Home</Link>
-            <ScrollLink
-              to="AboutUs"
-              smooth={true}
-              duration={500}
-              className="block text-white hover:text-blue-400"
-            >
-              About Us
-            </ScrollLink>
+            <Link to="/aboutus" className="block text-white hover:text-blue-400">About Us</Link>
             <Link to="/products" className="block text-white hover:text-blue-400">Products</Link>
             <Link to="/contact" className="block text-white hover:text-blue-400">Contact</Link>
             <Link to="/careers" className="block text-white hover:text-blue-400">Careers</Link>
