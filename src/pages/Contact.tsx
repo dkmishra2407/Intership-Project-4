@@ -17,7 +17,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-12 bg-black">
+    <div className="py-12 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8 text-white">Contact Us</h1>
 
@@ -33,7 +33,7 @@ const Contact = () => {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-colors"
                   required
                 />
               </div>
@@ -46,7 +46,7 @@ const Contact = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-colors"
                   required
                 />
               </div>
@@ -59,14 +59,14 @@ const Contact = () => {
                   rows={6}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-colors"
                   required
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
               >
                 Send Message
               </button>
@@ -75,31 +75,31 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div>
-            <div className="bg-gray-900 p-8 rounded-lg">
+            <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700 shadow-xl">
               <h3 className="text-2xl font-semibold mb-6 text-white">Get in Touch</h3>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <Phone className="text-gray-400" />
+                  <Phone className="text-blue-400" />
                   <div>
                     <h4 className="font-medium text-white">Phone</h4>
-                    <p className="text-gray-400">0980101989 / 7620870603 / 9011719000</p>
+                    <p className="text-gray-300">0980101989 / 7620870603 / 9011719000</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Mail className="text-gray-400" />
+                  <Mail className="text-blue-400" />
                   <div>
                     <h4 className="font-medium text-white">Email</h4>
-                    <p className="text-gray-400">Sadgurutiles@gmail.com</p>
+                    <p className="text-gray-300">Sadgurutiles@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <MapPin className="text-gray-400" />
+                  <MapPin className="text-blue-400" />
                   <div>
                     <h4 className="font-medium text-white">Address</h4>
-                    <p className="text-gray-400">
+                    <p className="text-gray-300">
                       Sr. No. 1/3<br />
                       Yojana Nagar,<br />
                       near HP Petrol Pump,<br />
