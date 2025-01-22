@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
-
+import {SwipeCarousel} from '../components/slider';
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

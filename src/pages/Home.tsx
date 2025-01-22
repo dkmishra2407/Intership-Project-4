@@ -260,6 +260,7 @@ const Home = () => {
   };
 
   return (
+    <>
     <div className="bg-neutral-950">
       {/* Hero Section */}
       <section className="relative h-[600px]">
@@ -474,10 +475,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section data-aos="fade-down">
-        <SwipeCarousel />
-      </section>
     </div>
+
+      <div>
+        <SwipeCarousel />
+      </div>
+    </>
   );
 };
 

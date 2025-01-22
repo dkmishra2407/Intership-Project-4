@@ -3,22 +3,39 @@ import React from 'react';
 const Careers = () => {
   const jobs = [
     {
-      title: "Sales Representative",
+      title: "Sales Manager",
       location: "Pune, MH",
       type: "Full-time",
-      description: "We're looking for an experienced sales representative to join our showroom team."
+      description: "Lead the sales team, build client relationships, and achieve targets.",
+      requirements: "5+ years in sales management, strong leadership skills."
     },
     {
-      title: "Tile Installation Expert",
-      location: "Pune, MH", 
-      type: "Full-time",
-      description: "Seeking a skilled tile installation expert with 5+ years of experience."
-    },
-    {
-      title: "Showroom Manager",
+      title: "Sales Executive",
       location: "Pune, MH",
-      type: "Full-time", 
-      description: "Looking for a passionate showroom manager to lead our flagship store."
+      type: "Full-time",
+      description: "Promote products, assist customers, and meet sales goals.",
+      requirements: "2+ years of sales experience, tiles industry knowledge preferred."
+    },
+    {
+      title: "Receptionist",
+      location: "Pune, MH",
+      type: "Full-time",
+      description: "Handle front desk operations, calls, and administrative tasks.",
+      requirements: "Proficient in MS Office, excellent communication skills."
+    },
+    {
+      title: "Helper",
+      location: "Pune, MH",
+      type: "Full-time",
+      description: "Support with loading/unloading and warehouse tasks.",
+      requirements: "Physically fit, hardworking, and team-oriented."
+    },
+    {
+      title: "Driver",
+      location: "Pune, MH",
+      type: "Full-time",
+      description: "Ensure timely deliveries and maintain vehicle condition.",
+      requirements: "Valid driver's license, clean record, and route knowledge."
     }
   ];
 
@@ -33,12 +50,12 @@ const Careers = () => {
   return (
     <div className="py-12 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8 text-white">Career Opportunities</h1>
+        <h1 className="text-4xl font-bold mb-8 text-white">Career Opportunities at Sadhguru Tiles</h1>
         
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-white">Join Our Team</h2>
           <p className="text-gray-300">
-            We're always looking for talented individuals to join our growing team. 
+            We're always looking for talented individuals to join our growing team at our location in Lohagaon, Pune. 
             Check out our current openings below.
           </p>
         </div>
@@ -56,6 +73,10 @@ const Careers = () => {
                 </span>
               </div>
               <p className="text-gray-300 mb-4">{job.description}</p>
+              <div className="bg-neutral-700/50 p-4 rounded-lg mb-4">
+                <p className="text-gray-200 font-medium mb-2">Requirements:</p>
+                <p className="text-gray-300">{job.requirements}</p>
+              </div>
               <button 
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
                 onClick={() => handleApplyClick(job.title)}
@@ -64,6 +85,16 @@ const Careers = () => {
               </button>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 p-6 bg-neutral-800 rounded-lg shadow-xl border border-neutral-700">
+          <h3 className="text-xl font-semibold text-white mb-4">Location</h3>
+          <p className="text-gray-300">
+            Sr. No. 1/3, Yojana Nagar,<br />
+            near HP Petrol Pump,<br />
+            Wagholi-Lohagaon Road,<br />
+            (Lohagaon) Pune-411047
+          </p>
         </div>
       </div>
     </div>
