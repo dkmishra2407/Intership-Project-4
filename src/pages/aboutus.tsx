@@ -3,7 +3,6 @@ import image9 from "../../assets/about us/20240310_115939.jpg";
 import { Download, ArrowRight, Target, Eye, Compass, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import {SwipeCarousel} from '../components/slider';
-
 // Define a type for the card data to ensure type safety
 type CardData = {
   icon: React.ReactNode;
