@@ -1,41 +1,49 @@
 import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import image1 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h (1).jpg';
+import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-style-tile-.jpg';
+import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg';
+import image4 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h.jpg'
+import image5 from '../../assets/Slider/---a-hero-banner-image-featuring-traditional-india.jpg'
+import image6 from '../../assets/Slider/a-vibrant-hero-banner-image-featuring-an-indian-fe.jpg'
+import image7 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a- (1).jpg'
+import image8 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg'
 
 export const HoverImageLinks = () => {
   return (
     <section className="bg-neutral-950 p-4 md:p-8">
       <div className="mx-auto max-w-5xl">
-        <Link
-          heading="Glossy 12*18"
-          subheading="SadhGuru Tiles"
-          imgSrc="../../assets/Slider/---a-hero-banner-image-featuring-traditional-india.jpg"
-          href="https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"
-        />
-        <Link
-          heading="Tiles 2*6"
-          subheading="SadhGuru Tiles"
-          imgSrc="../../assets/Slider/---a-hero-banner-image-featuring-traditional-india.jpg"
-          href="https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"
-        />
-        <Link
-          heading="Matt 600*600"
-          subheading="SadhGuru Tiles"
-          imgSrc="../../assets/Slider/---a-hero-banner-image-featuring-traditional-india.jpg"
-          href="https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"
-        />
-        <Link
-          heading="Kitchen 12*18 Glossy"
-          subheading="SadhGuru Tiles"
-          imgSrc="../../assets/Slider/---a-hero-banner-image-featuring-traditional-india.jpg"
-          href="https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"
-        />
-        <Link
-          heading="Glossy EL 12*18"
-          subheading="SadhGuru Tiles"
-          imgSrc="../../assets/Slider/---a-hero-banner-image-featuring-traditional-india.jpg"
-          href="https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"
-        />
+      <Link
+        heading="Glossy 12*18"
+        subheading="SadhGuru Tiles"
+        imgSrc={image1}
+        href="https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"
+      />
+      <Link
+        heading="Tiles 2*6"
+        subheading="SadhGuru Tiles"
+        imgSrc={image2}
+        href="https://drive.google.com/uc?export=download&id=1Zn0EnQJr8_5MKFNl6kjOFckXnDtxrETQ"
+      />
+      <Link
+        heading="Matt 600*600"
+        subheading="SadhGuru Tiles"
+        imgSrc={image3}
+        href="https://drive.google.com/uc?export=download&id=1Qb5XCmkpKV4lH83FPeAkn9Xlq5WgQk_d"
+      />
+      <Link
+        heading="Kitchen 12*18 Glossy"
+        subheading="SadhGuru Tiles"
+        imgSrc={image4}
+        href="https://drive.google.com/uc?export=download&id=1BBdjsItmsneMD5mqNTx4yhQFiZNpqyxf"
+      />
+      <Link
+        heading="Glossy EL 12*18"
+        subheading="SadhGuru Tiles"
+        imgSrc={image6}
+        href="https://drive.google.com/uc?export=download&id=1BBdjsItmsneMD5mqNTx4yhQFiZNpqyxf"
+      />
       </div>
     </section>
   );

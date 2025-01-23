@@ -17,9 +17,8 @@ const Home = () => {
     window.open(pdfPath, '_blank');
   };
 
-  const handleExplore = (e) => {
-    e.preventDefault();
-    
+  const handleExplore = () => {
+    <Link to="/products" />;
     console.log('Exploring products...');
   };
 
@@ -42,12 +41,14 @@ const Home = () => {
           <p className="text-gray-200 text-xl mb-8">
             Discover our extensive collection of high-quality tiles.
           </p>
+          <Link to="/products" >
           <button
             onClick={handleExplore}
             className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 inline-flex items-center gap-2 transition-colors"
           >
             Explore Products <ArrowRight size={20} />
           </button>
+          </Link>
         </div>
 
         {/* Right Content */}
