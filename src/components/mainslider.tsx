@@ -6,19 +6,13 @@ import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-s
 import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg';
 import image4 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h.jpg'
 import image5 from '../../assets/Slider/---a-hero-banner-image-featuring-traditional-india.jpg'
-import image6 from '../../assets/Slider/a-vibrant-hero-banner-image-featuring-an-indian-fe.jpg'
-import image7 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a- (1).jpg'
 import image8 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg'
 
 const imgs = [
-  image1,
-  image6,
   image3,
   image4,
-  image6,
   image2,
   image8,
-  image7,
   image5
 ];
 
@@ -66,7 +60,7 @@ export const SwipeCarousel1 = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-neutral-950 py-8">
+    <div className="relative overflow-hidden bg-white w-screen h-screen">
       <motion.div
         drag="x"
         dragConstraints={{
@@ -81,7 +75,7 @@ export const SwipeCarousel1 = () => {
         }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab items-center active:cursor-grabbing"
+        className="flex cursor-grab items-center active:cursor-grabbing h-full"
       >
         <Images imgIndex={imgIndex} />
       </motion.div>
@@ -108,7 +102,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               scale: imgIndex === idx ? 0.95 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className="aspect-video w-screen shrink-0 rounded-xl bg-neutral-800 object-cover px-10"
+            className="w-screen h-screen shrink-0 rounded-none bg-white object-cover"
           />
         );
       })}
@@ -124,14 +118,14 @@ const Dots = ({
   setImgIndex: Dispatch<SetStateAction<number>>;
 }) => {
   return (
-    <div className="mt-4 flex w-full justify-center gap-2">
+    <div className="absolute bottom-10 left-0 right-0 flex w-full justify-center gap-2">
       {imgs.map((_, idx) => {
         return (
           <button
             key={idx}
             onClick={() => setImgIndex(idx)}
             className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
+              idx === imgIndex ? "bg-blue-600" : "bg-gray-300"
             }`}
           />
         );
@@ -143,8 +137,10 @@ const Dots = ({
 const GradientEdges = () => {
   return (
     <>
-      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
-      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
+      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-white/50 to-white/0" />
+      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-white/50 to-white/0" />
     </>
   );
 };
+
+export default SwipeCarousel1;
