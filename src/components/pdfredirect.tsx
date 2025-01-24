@@ -12,7 +12,7 @@ import image8 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-t
 
 export const HoverImageLinks = () => {
   return (
-    <section className="bg-neutral-950 p-4 md:p-8">
+    <section className="bg-white p-4 md:p-8">
       <div className="mx-auto max-w-5xl">
       <Link
         heading="Glossy 12*18"
@@ -93,7 +93,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
-      className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
+      className="group relative flex items-center justify-between border-b-2 border-gray-300 py-4 transition-colors duration-500 hover:border-gray-800 md:py-8"
     >
       <div>
         <motion.span
@@ -106,7 +106,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
             staggerChildren: 0.075,
             delayChildren: 0.25,
           }}
-          className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
+          className="relative z-10 block text-4xl font-bold text-gray-600 transition-colors duration-500 group-hover:text-gray-900 md:text-6xl"
         >
           {heading.split("").map((l, i) => (
             <motion.span
@@ -122,7 +122,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
             </motion.span>
           ))}
         </motion.span>
-        <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">
+        <span className="relative z-10 mt-2 block text-base text-gray-500 transition-colors duration-500 group-hover:text-gray-800">
           {subheading}
         </span>
       </div>
@@ -158,8 +158,10 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
         transition={{ type: "spring" }}
         className="relative z-10 p-4"
       >
-        <FiArrowRight className="text-5xl text-neutral-50" />
+        <FiArrowRight className="text-5xl text-gray-800" />
       </motion.div>
     </motion.a>
   );
 };
+
+export default HoverImageLinks;

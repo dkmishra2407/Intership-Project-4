@@ -14,17 +14,21 @@ const Header = () => {
             <div className='h-8 w-8'>
               <img src={logo} alt="logo" />
             </div>
-            <span className="text-xl font-bold text-black">SadhGuru Tiles</span>
+            <span className="text-xl font-bold text-black">SadhGuru Tiles & Marbles</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-black hover:text-blue-400">Home</Link>
-            <Link to="/aboutus" className="block text-black hover:text-blue-400">About Us</Link>
-            <Link to="/products" className="text-black hover:text-blue-400">Products</Link>
-            <Link to="/contact" className="text-black hover:text-blue-400">Contact</Link>
-            <Link to="/careers" className="text-black hover:text-blue-400">Careers</Link>
-          </div>
+  <Link to="/" className="text-black hover:text-blue-400">Home</Link>
+  <Link to="/aboutus" className="block text-black hover:text-blue-400">About Us</Link>
+  <Link to="/products" className="text-black hover:text-blue-400">Products</Link>
+  <Link to="/contact" className="text-black hover:text-blue-400">Contact</Link>
+  <Link to="/careers" className="text-black hover:text-blue-400">Careers</Link>
+  <Link to="http://13.60.187.34:7171/">
+    <div className="text-black hover:text-blue-400 bg-blue-600 py-1 px-2">Login</div>
+  </Link>
+</div>
+
 
           {/* Mobile Menu Button */}
           <button
