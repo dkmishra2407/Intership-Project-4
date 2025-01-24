@@ -48,13 +48,13 @@ const Careers = () => {
   };
 
   return (
-    <div className="py-12 bg-neutral-950 min-h-screen">
+    <div className="py-12 bg-white min-h-screen">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8 text-white">Career Opportunities at Sadhguru Tiles</h1>
+        <h1 className="text-4xl font-bold mb-8 text-black">Career Opportunities at Sadhguru Tiles</h1>
         
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-white">Join Our Team</h2>
-          <p className="text-gray-300">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Join Our Team</h2>
+          <p className="text-gray-700">
             We're always looking for talented individuals to join our growing team at our location in Lohagaon, Pune. 
             Check out our current openings below.
           </p>
@@ -62,20 +62,20 @@ const Careers = () => {
         
         <div className="space-y-6">
           {jobs.map((job, index) => (
-            <div key={index} className="bg-neutral-800 p-6 rounded-lg shadow-xl border border-neutral-700">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-white">{job.title}</h3>
-                  <p className="text-gray-300">{job.location}</p>
+                  <h3 className="text-xl font-semibold text-black">{job.title}</h3>
+                  <p className="text-gray-700">{job.location}</p>
                 </div>
-                <span className="bg-blue-900 text-blue-200 px-3 py-1 rounded-full text-sm">
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
                   {job.type}
                 </span>
               </div>
-              <p className="text-gray-300 mb-4">{job.description}</p>
-              <div className="bg-neutral-700/50 p-4 rounded-lg mb-4">
-                <p className="text-gray-200 font-medium mb-2">Requirements:</p>
-                <p className="text-gray-300">{job.requirements}</p>
+              <p className="text-gray-800 mb-4">{job.description}</p>
+              <div className="bg-gray-100 p-4 rounded-lg mb-4">
+                <p className="text-gray-900 font-medium mb-2">Requirements:</p>
+                <p className="text-gray-700">{job.requirements}</p>
               </div>
               <button 
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -87,9 +87,9 @@ const Careers = () => {
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-neutral-800 rounded-lg shadow-xl border border-neutral-700">
-          <h3 className="text-xl font-semibold text-white mb-4">Location</h3>
-          <p className="text-gray-300">
+        <div className="mt-12 p-6 bg-white rounded-lg shadow-xl border border-gray-200">
+          <h3 className="text-xl font-semibold text-black mb-4">Location</h3>
+          <p className="text-gray-800">
             Sr. No. 1/3, Yojana Nagar,<br />
             near HP Petrol Pump,<br />
             Wagholi-Lohagaon Road,<br />

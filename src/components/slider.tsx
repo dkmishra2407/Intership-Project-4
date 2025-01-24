@@ -1,7 +1,6 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
-import image1 from "../../assets/about us/WhatsApp Image 2025-01-21 at 11.03.40_51240557 copy.jpg"
 import image2 from "../../assets/about us/WhatsApp Image 2025-01-21 at 11.03.40_51240557.jpg"
 import image3 from "../../assets/about us/WhatsApp Image 2025-01-21 at 11.04.50_b4325156.jpg"
 import image4 from "../../assets/about us/WhatsApp Image 2025-01-21 at 11.07.04_eb8dec6d.jpg"

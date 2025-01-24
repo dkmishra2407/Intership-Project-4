@@ -70,7 +70,7 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   return (
-    <div className="py-12 bg-neutral-950">
+    <div className="py-12 bg-white">
   <div className="container mx-auto px-4">
     <h1 className="text-4xl font-bold mb-8 text-white">Our Products</h1>
 
