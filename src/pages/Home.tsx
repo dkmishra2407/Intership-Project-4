@@ -1,15 +1,19 @@
-import React from 'react';
-import { Download, ArrowRight, Target, Eye, Compass, Award } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Download, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import image1 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h (1).jpg';
 import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-style-tile-.jpg';
 import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg';
-import logo from '../../assets/about us/LOGO.jpg'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import logo from '../../assets/about us/LOGO.jpg';
 import { SwipeCarousel1 } from '../components/mainslider';
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200 }); // Initialize AOS with desired settings
+  }, []);
+
   const handleDownload = () => {
     const pdfPath = '/assets/Wall_Tiles_Catalogue/Stone_Cladding.pdf';
     window.open(pdfPath, '_blank');
@@ -22,11 +26,12 @@ const Home = () => {
   return (
     <div className="bg-white font-sans text-gray-900">
       {/* Hero Section */}
-      <section className='w-full'>
-        <SwipeCarousel1/>
+      <section className="w-full" data-aos="fade-in">
+        <SwipeCarousel1 />
       </section>
 
-      <section className="bg-white py-16 flex ml-10 gap-12">
+      {/* Transform Your Space Section */}
+      <section className="bg-white py-16 flex ml-10 gap-12" data-aos="fade-up">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 ml-10">
           {/* Left Content */}
           <div className="text-center md:text-left">
@@ -54,7 +59,7 @@ const Home = () => {
       </section>
 
       {/* Featured Collections */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-100" data-aos="zoom-in">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-900 font-serif">
             Featured Collections
@@ -78,6 +83,7 @@ const Home = () => {
                   src={collection.img}
                   alt={collection.title}
                   className="w-full h-64 object-cover"
+                  data-aos="fade-up"
                 />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2 text-blue-800 font-serif">
@@ -100,7 +106,7 @@ const Home = () => {
       </section>
 
       {/* Catalogue Download */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-blue-50" data-aos="fade-up">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif">
             Download Our Latest Catalogue
@@ -119,7 +125,7 @@ const Home = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" data-aos="fade-in">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-900 font-serif">
             Visit Our Showroom

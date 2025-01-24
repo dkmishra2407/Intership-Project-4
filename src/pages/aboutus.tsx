@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Download, ArrowRight, Target, Eye, Compass, Award } from "lucide-react";
 import { Link } from "react-router-dom";
-import {SwipeCarousel} from '../components/slider';
-import image9 from '../../assets/about us/about_founder.jpg'
+import { SwipeCarousel } from "../components/slider";
+import image9 from "../../assets/about us/about_founder.jpg";
+import HoverDevCards from '../components/whytochoose';
 
 // Define a type for the card data to ensure type safety
 type CardData = {
@@ -12,6 +15,14 @@ type CardData = {
 };
 
 const AboutUs: React.FC = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   // Data for vision, mission, and goal cards
   const visionMissionGoalCards: CardData[] = [
     {
@@ -64,24 +75,29 @@ const AboutUs: React.FC = () => {
     <div className="bg-white text-gray-900 font-sans">
       {/* About Us Section */}
       <section className="py-16 container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12">
+        <div
+          className="max-w-4xl mx-auto text-center mb-12"
+          data-aos="fade-up"
+        >
           <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif">
             About Sadhguru Tiles
           </h2>
           <p className="text-lg mb-8 font-light">
-          Sadhguru tiles is the place where you can find the sharp vision of marketing, 
-          global network and powerful backbone of quality. The company cares the vision 
-          to cater world class ceramic tiles. We believe in delivering superior quality
-          of ceramic tiles with a sharp vision on modern technology along with modernized art work.
+            Sadhguru tiles is the place where you can find the sharp vision of
+            marketing, global network and powerful backbone of quality. The
+            company cares the vision to cater world class ceramic tiles. We
+            believe in delivering superior quality of ceramic tiles with a
+            sharp vision on modern technology along with modernized art work.
           </p>
           <p className="text-lg font-light">
-          We introduce you to our newest range of Ceramic products that have tremendous potential
-          to cater the global market with a competitive edge for our wall tiles buyers
+            We introduce you to our newest range of Ceramic products that have
+            tremendous potential to cater the global market with a competitive
+            edge for our wall tiles buyers.
           </p>
           <p className="text-lg font-light">
-            Today, our award-winning company is one of the largest retailers of its kind in
-            Pune, Maharashtra, offering a wide range of Wall & Floor Tiles, Bath products, and
-            Modular Kitchens.
+            Today, our award-winning company is one of the largest retailers of
+            its kind in Pune, Maharashtra, offering a wide range of Wall &
+            Floor Tiles, Bath products, and Modular Kitchens.
           </p>
         </div>
 
@@ -90,7 +106,8 @@ const AboutUs: React.FC = () => {
           {visionMissionGoalCards.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all"
+              className="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all"
+              data-aos="zoom-in"
             >
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 {item.icon}
@@ -106,7 +123,10 @@ const AboutUs: React.FC = () => {
         </div>
 
         {/* Company Values */}
-        <div className="bg-gray-50 p-8 rounded-lg mb-16 border border-gray-200">
+        <div
+          className="bg-gray-50 p-8 rounded-lg mb-16 border border-gray-200"
+          data-aos="fade-right"
+        >
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center justify-center mb-6">
               <Award className="text-blue-600 w-10 h-10 mr-3" />
@@ -115,16 +135,17 @@ const AboutUs: React.FC = () => {
               </h3>
             </div>
             <p className="text-lg text-gray-700 text-center font-light">
-              At Sadhguru Tiles, integrity is a cornerstone of our work ethics. We prioritize
-              our employees and customers, ensuring a high client retention ratio and timely
-              delivery through a wide distribution network.
+              At Sadhguru Tiles, integrity is a cornerstone of our work ethics.
+              We prioritize our employees and customers, ensuring a high client
+              retention ratio and timely delivery through a wide distribution
+              network.
             </p>
           </div>
         </div>
 
         {/* Why Choose Us Section */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-blue-900 font-serif">
+        <div className="mb-16" data-aos="fade-up">
+          {/* <h3 className="text-3xl font-bold text-center mb-8 text-blue-900 font-serif">
             Why Choose Us?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -132,32 +153,35 @@ const AboutUs: React.FC = () => {
               <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all"
+                data-aos="zoom-in-up"
               >
                 <h4 className="text-xl font-bold mb-3 text-blue-600 font-serif">
                   {item.title}
                 </h4>
-                <p className="text-gray-700 font-light">
-                  {item.description}
-                </p>
+                <p className="text-gray-700 font-light">{item.description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
+
+          <HoverDevCards/>
         </div>
 
         {/* Founder Section */}
-        <div className="bg-gray-50 w-full p-8 rounded-lg border border-gray-200">
-  <div className="flex justify-center w-full mb-8">
-    <img
-      src={image9}
-      alt="Prashant Gilbile"
-      className="object-cover rounded-lg shadow-lg w-full h-auto"
-    />
-  </div>
-</div>
-
+        <div
+          className="bg-gray-50 w-full p-8 rounded-lg border border-gray-200"
+          data-aos="fade-left"
+        >
+          <div className="flex justify-center w-full mb-8">
+            <img
+              src={image9}
+              alt="Prashant Gilbile"
+              className="object-cover rounded-lg shadow-lg w-full h-auto"
+            />
+          </div>
+        </div>
       </section>
 
-      <div>
+      <div data-aos="fade-up">
         <SwipeCarousel />
       </div>
     </div>
