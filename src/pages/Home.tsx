@@ -8,7 +8,8 @@ import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-s
 import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg';
 import logo from '../../assets/about us/LOGO.jpg';
 import { SwipeCarousel1 } from '../components/mainslider';
-
+import  VerticalAccordion  from '../components/Tiles_supplier';
+import VerticalAccordion1  from '../components/brands';
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 }); // Initialize AOS with desired settings
@@ -124,6 +125,19 @@ const Home = () => {
         </div>
       </section>
 
+      <section className='py-16 bg-white' data-aos="fade-out">
+      <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
+          Authorised Tiles Suppliers
+      </h2>
+      <VerticalAccordion1/>
+      </section>
+
+      <section className='py-16 bg-white' data-aos="fade-out">
+      <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
+        Authorised Bathware Brands 
+      </h2>
+      <VerticalAccordion/>
+      </section>
       {/* Map Section */}
       <section className="py-16 bg-white" data-aos="fade-in">
         <div className="container mx-auto px-4">

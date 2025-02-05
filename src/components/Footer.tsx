@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin , MessageCircleMore} from 'lucide-react';
 import logo from '../../assets/about us/LOGO.jpg'
-
+import { FaWhatsapp } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
@@ -29,7 +29,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>0980101989<br />7620870603<br />9011719000</span>
+                <span>9011871900<br />9822581900<br />9272116900 <br/> 9860851999</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
@@ -60,6 +60,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/p/DDCzPDQiGhS/?igsh=MWxnMDN6ajZyc3U2Zw==" className="text-gray-400 hover:text-white">
                 <Instagram />
               </a>
+              <a href="https://web.whatsapp.com/send?phone=9011871900" target="_blank"><FaWhatsapp size={25}/></a>
             </div>
           </div>
         </div>

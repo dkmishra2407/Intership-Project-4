@@ -182,6 +182,9 @@ const AboutUs: React.FC = () => {
       </section>
 
       <div data-aos="fade-up">
+      <h2 className="text-6xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
+            Our Team
+      </h2>
         <SwipeCarousel />
       </div>
     </div>
