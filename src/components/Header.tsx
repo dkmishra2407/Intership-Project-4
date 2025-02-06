@@ -356,7 +356,7 @@ const Header = () => {
 
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-black hover:text-blue-400">Home</Link>
-            <ProductDropdown />
+            <Link to="/products" className="text-black hover:text-blue-400"><ProductDropdown /></Link>
             <Link to="/aboutus" className="text-black hover:text-blue-400">About Us</Link>
             <Link to="/contact" className="text-black hover:text-blue-400">Contact</Link>
             <Link to="/careers" className="text-black hover:text-blue-400">Careers</Link>
@@ -376,7 +376,7 @@ const Header = () => {
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4">
             <Link to="/" className="block text-black hover:text-blue-400">Home</Link>
-            <Link to="/products" className="block text-black hover:text-blue-400">Products</Link>
+            <Link to="/products" className="block text-black hover:text-blue-400"><ProductDropdown /></Link>
             <Link to="/aboutus" className="block text-black hover:text-blue-400">About Us</Link>
             <Link to="/contact" className="block text-black hover:text-blue-400">Contact</Link>
             <Link to="/careers" className="block text-black hover:text-blue-400">Careers</Link>
