@@ -8,8 +8,21 @@ import image2 from '../../assets/Slider/a-hero-banner-image-featuring-european-s
 import image3 from '../../assets/Slider/a-hero-banner-image-showcasing-outdoor-tiles-in-a-.jpg';
 import logo from '../../assets/about us/LOGO.jpg';
 import { SwipeCarousel1 } from '../components/mainslider';
+import p1 from '../../assets/Collection/1.jpg';
+import p2 from '../../assets/Collection/2.jpg';
+import p3 from '../../assets/Collection/3.jpg';
+import p4 from '../../assets/Collection/abcd.jpg';
+import p10 from '../../assets/Collection/4.jpg';
+import p9 from '../../assets/Collection/5.jpg';
+import p8 from '../../assets/Collection/6.jpg';
+import p7 from '../../assets/Collection/7.jpg';
+import p5 from '../../assets/Collection/8.jpg';
+import p6 from '../../assets/Collection/9.jpg';
 import  VerticalAccordion  from '../components/Tiles_supplier';
-import VerticalAccordion1  from '../components/brands';
+const images = [p1, p2, p3, p4];
+const images1 = [p10, p9, p8, p7,p5,p6];
+
+
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 }); // Initialize AOS with desired settings
@@ -125,18 +138,33 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='py-16 bg-white' data-aos="fade-out">
+      <section className='py-16 bg-white' data-aos="fade-right">
       <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
           Authorised Tiles Suppliers
       </h2>
-      <VerticalAccordion1/>
+      {/* <VerticalAccordion1/> */}
+      <div className="bg-white py-10 px-5">
+      <div className="grid grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {images.map((img, index) => (
+          <div key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
+            <img src={img} alt={`Client ${index + 1}`} className="w-full h-auto object-cover rounded-md" />
+          </div>
+        ))}
+      </div>
+    </div>
       </section>
 
-      <section className='py-16 bg-white' data-aos="fade-out">
+      <section className='py-16 bg-white' data-aos="fade-left">
       <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
         Authorised Bathware Brands 
       </h2>
-      <VerticalAccordion/>
+      <div className="grid grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {images1.map((img, index) => (
+          <div key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
+            <img src={img} alt={`Client ${index + 1}`} className="w-full h-auto object-cover rounded-md" />
+          </div>
+        ))}
+      </div>
       </section>
       {/* Map Section */}
       <section className="py-16 bg-white" data-aos="fade-in">
