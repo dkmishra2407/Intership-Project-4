@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {HoverImageLinks} from '../components/pdfredirect';
+import ProductLinks from '../components/pdfredirect';
 
 // Import Images
 import image1 from '../../assets/Tiles Picture/Floor Tiles/Double Charge/Dbl01.jpg';
@@ -70,8 +70,8 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   return (
-    <div className="py-12 bg-white">
-    <HoverImageLinks />
+    <div className="bg-white">
+    <ProductLinks />
     </div>
   );
 };

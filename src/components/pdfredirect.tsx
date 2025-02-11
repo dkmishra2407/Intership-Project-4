@@ -204,32 +204,104 @@ const products = {
   "Sanitory Products": ["/products/sanitaryware", []]
 };
 
-const Link = ({ heading, imgSrc, subheading, href, subtypes }) => {
+const productsize = {
+  "GVT": ["/products/tiles", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
+  "Double Charged": ["/products/marbles", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
+  "Parking Tiles": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "800x800"]],
+  "Wooden Tiles": ["/products/sanitaryware", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
+  "Bathroom Tiles": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "800x800"]],
+  "Kitchen Tiles": ["/products/sanitaryware", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
+  "Imported": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "800x800"]],
+  "Elevation Glossy": ["/products/sanitaryware", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]]
+};
+
+const SubtypeLink = ({ subtype, index }) => {
+  const [isSizeExpanded, setIsSizeExpanded] = useState(false);
+  const sizes = productsize[subtype]?.[1] || [];
+
+  return (
+    <motion.div
+      initial={{ x: -20, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay: index * 0.1 }}
+      className="border-l-2 border-gray-200 pl-4"
+    >
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsSizeExpanded(!isSizeExpanded);
+        }}
+        className="flex cursor-pointer items-center justify-between py-2 hover:text-indigo-600"
+      >
+        <div className="flex items-center space-x-2">
+          <FiArrowRight className="text-lg" />
+          <span className="font-medium">{subtype}</span>
+        </div>
+        {sizes.length > 0 && (
+          <motion.div
+            animate={{ rotate: isSizeExpanded ? 180 : 0 }}
+            className="p-1"
+          >
+            <FiChevronDown className="text-xl text-gray-600" />
+          </motion.div>
+        )}
+      </div>
+
+      <AnimatePresence>
+        {isSizeExpanded && sizes.length > 0 && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="ml-6 overflow-hidden"
+          >
+            <div className="space-y-2 py-2">
+              {sizes.map((size, idx) => (
+                <motion.div
+                  key={size}
+                  initial={{ x: -10, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-indigo-600"
+                >
+                  <span className="h-1 w-1 rounded-full bg-gray-400"></span>
+                  <span>{size}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+};
+
+const Link = ({ heading, subheading, href, subtypes }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="border-b-2 border-gray-300">
-      <motion.div
-        className="group relative flex items-center justify-between py-4 transition-colors duration-500 hover:border-gray-800 md:py-8"
+    <div className="border-b border-gray-200">
+      <div
+        className="group cursor-pointer py-6 transition-all duration-300 hover:bg-gray-50 md:py-8"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="flex items-center justify-between w-full">
-          <div>
-            <span className="text-4xl font-bold text-gray-600 group-hover:text-gray-900 md:text-6xl">
+        <div className="flex items-center justify-between">
+          <div className="space-y-1">
+            <h3 className="text-2xl font-semibold tracking-tight text-gray-900 group-hover:text-indigo-600 md:text-3xl">
               {heading}
-            </span>
-            <span className="mt-2 block text-base text-gray-500 group-hover:text-gray-800">
+            </h3>
+            <p className="text-sm font-medium text-gray-500 md:text-base">
               {subheading}
-            </span>
+            </p>
           </div>
           <motion.div
             animate={{ rotate: isExpanded ? 180 : 0 }}
             className="p-4"
           >
-            <FiChevronDown className="text-3xl text-gray-800" />
+            <FiChevronDown className="h-6 w-6 text-gray-400 group-hover:text-indigo-600" />
           </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {isExpanded && subtypes.length > 0 && (
@@ -239,18 +311,9 @@ const Link = ({ heading, imgSrc, subheading, href, subtypes }) => {
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden bg-gray-50"
           >
-            <div className="p-4 space-y-2">
+            <div className="space-y-2 p-4">
               {subtypes.map((subtype, index) => (
-                <motion.div
-                  key={subtype}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
-                >
-                  <FiArrowRight className="text-lg" />
-                  <span>{subtype}</span>
-                </motion.div>
+                <SubtypeLink key={subtype} subtype={subtype} index={index} />
               ))}
             </div>
           </motion.div>
@@ -260,23 +323,27 @@ const Link = ({ heading, imgSrc, subheading, href, subtypes }) => {
   );
 };
 
-export const HoverImageLinks = () => {
+const ProductLinks = () => {
   return (
-    <section className="bg-white p-4 md:p-8">
-      <div className="mx-auto max-w-5xl">
-        {Object.entries(products).map(([category, [href, subtypes]]) => (
-          <Link
-            key={category}
-            heading={category}
-            subheading="SadhGuru Tiles"
-            imgSrc=""
-            href={href}
-            subtypes={subtypes}
-          />
-        ))}
+    <section className="bg-white">
+      <div className="mx-auto max-w-4xl px-4 py-8 md:px-6 md:py-12">
+        <h2 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
+          Our Products
+        </h2>
+        <div className="rounded-lg  bg-white shadow-sm">
+          {Object.entries(products).map(([category, [href, subtypes]]) => (
+            <Link
+              key={category}
+              heading={category}
+              subheading="SadhGuru Tiles"
+              href={href}
+              subtypes={subtypes}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default HoverImageLinks;
+export default ProductLinks;
