@@ -206,13 +206,13 @@ const products = {
 
 const productsize = {
   "GVT": ["/products/tiles", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
-  "Double Charged": ["/products/marbles", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
-  "Parking Tiles": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "800x800"]],
-  "Wooden Tiles": ["/products/sanitaryware", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
-  "Bathroom Tiles": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "800x800"]],
-  "Kitchen Tiles": ["/products/sanitaryware", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
+  "Double Charged": ["/products/marbles", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800","1000x1000"]],
+  "Parking Tiles": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "500x500"]],
+  "Wooden Tiles": ["/products/sanitaryware", ["600x600", "200x1000", "200x1200", "1200x600"]],
+  "Bathroom Tiles": ["/products/sanitaryware", ["300x450", "300x600", "300x500", "600x1200"]],
+  "Kitchen Tiles": ["/products/sanitaryware", ["300x450", "300x600", "300x500", "600x1200"]],
   "Imported": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "800x800"]],
-  "Elevation Glossy": ["/products/sanitaryware", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]]
+  "Elevation Glossy": ["/products/sanitaryware", ["300x600", "300x450"]]
 };
 
 const SubtypeLink = ({ subtype, index }) => {
