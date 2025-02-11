@@ -356,11 +356,11 @@ const Header = () => {
 
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-black hover:text-blue-400">Home</Link>
-            <Link to="/products" className="text-black hover:text-blue-400"><ProductDropdown /></Link>
+            <Link to="/products" className="text-black hover:text-blue-400">Products</Link>
             <Link to="/aboutus" className="text-black hover:text-blue-400">About Us</Link>
             <Link to="/contact" className="text-black hover:text-blue-400">Contact</Link>
             <Link to="/careers" className="text-black hover:text-blue-400">Careers</Link>
-            <Link to="http://13.60.187.34:7171/">
+            <Link to="http://16.171.154.51:7171/">
               <div className="text-black hover:text-blue-400 bg-blue-600 py-1 px-2">Login</div>
             </Link>
           </div>
@@ -375,12 +375,19 @@ const Header = () => {
 
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4">
-            <Link to="/" className="block text-black hover:text-blue-400">Home</Link>
-            <Link to="/products" className="block text-black hover:text-blue-400"><ProductDropdown /></Link>
-            <Link to="/aboutus" className="block text-black hover:text-blue-400">About Us</Link>
-            <Link to="/contact" className="block text-black hover:text-blue-400">Contact</Link>
-            <Link to="/careers" className="block text-black hover:text-blue-400">Careers</Link>
-          </div>
+          <Link to="/" className="block text-black hover:text-blue-400">Home</Link>
+          <Link to="/products" className="block text-black hover:text-blue-400">Products</Link>
+          <Link to="/aboutus" className="block text-black hover:text-blue-400">About Us</Link>
+          <Link to="/contact" className="block text-black hover:text-blue-400">Contact</Link>
+          <Link to="/careers" className="block text-black hover:text-blue-400">Careers</Link>
+          
+          <a 
+            href="http://16.171.154.51:7171/"
+            className="block text-center rounded-md bg-blue-500 px-4 py-2 font-medium text-white transition duration-300 hover:bg-blue-600"
+          >
+            Login
+          </a>
+        </div>        
         )}
       </nav>
     </header>
