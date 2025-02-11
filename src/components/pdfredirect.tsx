@@ -188,6 +188,7 @@
 // };
 
 // export default HoverImageLinks;
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowRight, FiChevronDown, FiFileText } from 'react-icons/fi';
@@ -200,7 +201,7 @@ const products = {
   "Marble": ["/products/sanitaryware", []],
   "Quardsz": ["/products/sanitaryware", []],
   "Paints": ["/products/sanitaryware", []],
-  "Sanitory Products": ["/products/sanitaryware", []]
+  "Sanitory Products": ["/products/sanitaryware", ["Essco Sanitary ware","Cera sanitary ware","Kerovit sanitary ware","Nirali BG sanitary ware","Franke Sanitary ware","Elvis sanitary ware"]]
 };
 
 const productsize = {
@@ -211,17 +212,69 @@ const productsize = {
   "Bathroom Tiles": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x450", "300x600", "300x500", "600x1200"]],
   "Kitchen Tiles": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x450", "300x600", "300x500", "600x1200"]],
   "Imported": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x300", "400x400", "600x600", "800x800"]],
-  "Elevation Glossy": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x600", "300x450"]]
+  "Elevation Glossy": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x600", "300x450"]],
+  "Essco Sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
+  "Cera sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
+  "Kerovit sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
+  "Nirali BG sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
+  "Franke Sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
+  "Elvis sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []]
 };
 
-const SubtypeLink = ({ subtype, index }) => {
-  const [isSizeExpanded, setIsSizeExpanded] = useState(false);
-  const [pdfUrl, sizes] = productsize[subtype] || ["", []];
+const productsize1 = {
+  "GVT 600x600": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "GVT 800x800": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "GVT 600x1200": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "GVT 800x1200": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "GVT 800x1600": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "GVT 1200x1800": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "Double Charged 600x600": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "Double Charged 800x800": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  "Double Charged 600x1200": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"]
+};
+
+const SizeLink = ({ subtype, size }) => {
+  const pdfKey = `${subtype} ${size}`;
+  const pdfUrl = productsize1[pdfKey]?.[0];
 
   const handlePdfClick = (e) => {
     e.stopPropagation();
     if (pdfUrl) {
       window.open(pdfUrl, '_blank');
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ x: -10, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      className="flex items-center justify-between text-sm text-gray-600 hover:text-indigo-600"
+    >
+      <div className="flex items-center space-x-2">
+        <span className="h-1 w-1 rounded-full bg-gray-400"></span>
+        <span>{size}</span>
+      </div>
+      {pdfUrl && (
+        <button
+          onClick={handlePdfClick}
+          className="ml-2 flex items-center space-x-1 rounded-md bg-indigo-600 px-2 py-1 text-xs text-white hover:bg-indigo-700"
+        >
+          <FiFileText className="text-xs" />
+          <span>PDF</span>
+        </button>
+      )}
+    </motion.div>
+  );
+};
+
+const SubtypeLink = ({ subtype, index }) => {
+  const [isSizeExpanded, setIsSizeExpanded] = useState(false);
+  const [categoryPdfUrl, sizes] = productsize[subtype] || ["", []];
+
+  const handleCategoryPdfClick = (e) => {
+    e.stopPropagation();
+    if (categoryPdfUrl) {
+      window.open(categoryPdfUrl, '_blank');
     }
   };
 
@@ -253,13 +306,13 @@ const SubtypeLink = ({ subtype, index }) => {
             </motion.div>
           )}
         </div>
-        {pdfUrl && (
+        {categoryPdfUrl && (
           <button
-            onClick={handlePdfClick}
+            onClick={handleCategoryPdfClick}
             className="ml-4 flex items-center space-x-2 rounded-md bg-indigo-600 px-3 py-1 text-sm text-white hover:bg-indigo-700"
           >
             <FiFileText />
-            <span>View PDF</span>
+            <span>Category PDF</span>
           </button>
         )}
       </div>
@@ -273,17 +326,8 @@ const SubtypeLink = ({ subtype, index }) => {
             className="ml-6 overflow-hidden"
           >
             <div className="space-y-2 py-2">
-              {sizes.map((size, idx) => (
-                <motion.div
-                  key={size}
-                  initial={{ x: -10, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: idx * 0.05 }}
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-indigo-600"
-                >
-                  <span className="h-1 w-1 rounded-full bg-gray-400"></span>
-                  <span>{size}</span>
-                </motion.div>
+              {sizes.map((size) => (
+                <SizeLink key={size} subtype={subtype} size={size} />
               ))}
             </div>
           </motion.div>
