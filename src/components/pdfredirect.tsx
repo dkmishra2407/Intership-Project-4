@@ -188,10 +188,9 @@
 // };
 
 // export default HoverImageLinks;
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiArrowRight, FiChevronDown } from 'react-icons/fi';
+import { FiArrowRight, FiChevronDown, FiFileText } from 'react-icons/fi';
 
 const products = {
   "Floor Tiles": ["/products/tiles", ["GVT", "Double Charged", "Parking Tiles", "Wooden Tiles"]],
@@ -205,19 +204,26 @@ const products = {
 };
 
 const productsize = {
-  "GVT": ["/products/tiles", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
-  "Double Charged": ["/products/marbles", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800","1000x1000"]],
-  "Parking Tiles": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "500x500"]],
-  "Wooden Tiles": ["/products/sanitaryware", ["600x600", "200x1000", "200x1200", "1200x600"]],
-  "Bathroom Tiles": ["/products/sanitaryware", ["300x450", "300x600", "300x500", "600x1200"]],
-  "Kitchen Tiles": ["/products/sanitaryware", ["300x450", "300x600", "300x500", "600x1200"]],
-  "Imported": ["/products/sanitaryware", ["300x300", "400x400", "600x600", "800x800"]],
-  "Elevation Glossy": ["/products/sanitaryware", ["300x600", "300x450"]]
+  "GVT": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
+  "Double Charged": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800","1000x1000"]],
+  "Parking Tiles": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x300", "400x400", "600x600", "500x500"]],
+  "Wooden Tiles": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["600x600", "200x1000", "200x1200", "1200x600"]],
+  "Bathroom Tiles": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x450", "300x600", "300x500", "600x1200"]],
+  "Kitchen Tiles": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x450", "300x600", "300x500", "600x1200"]],
+  "Imported": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x300", "400x400", "600x600", "800x800"]],
+  "Elevation Glossy": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x600", "300x450"]]
 };
 
 const SubtypeLink = ({ subtype, index }) => {
   const [isSizeExpanded, setIsSizeExpanded] = useState(false);
-  const sizes = productsize[subtype]?.[1] || [];
+  const [pdfUrl, sizes] = productsize[subtype] || ["", []];
+
+  const handlePdfClick = (e) => {
+    e.stopPropagation();
+    if (pdfUrl) {
+      window.open(pdfUrl, '_blank');
+    }
+  };
 
   return (
     <motion.div
@@ -226,24 +232,35 @@ const SubtypeLink = ({ subtype, index }) => {
       transition={{ delay: index * 0.1 }}
       className="border-l-2 border-gray-200 pl-4"
     >
-      <div
-        onClick={(e) => {
-          e.stopPropagation();
-          setIsSizeExpanded(!isSizeExpanded);
-        }}
-        className="flex cursor-pointer items-center justify-between py-2 hover:text-indigo-600"
-      >
-        <div className="flex items-center space-x-2">
-          <FiArrowRight className="text-lg" />
-          <span className="font-medium">{subtype}</span>
+      <div className="flex items-center justify-between">
+        <div
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsSizeExpanded(!isSizeExpanded);
+          }}
+          className="flex flex-1 cursor-pointer items-center justify-between py-2 hover:text-indigo-600"
+        >
+          <div className="flex items-center space-x-2">
+            <FiArrowRight className="text-lg" />
+            <span className="font-medium">{subtype}</span>
+          </div>
+          {sizes.length > 0 && (
+            <motion.div
+              animate={{ rotate: isSizeExpanded ? 180 : 0 }}
+              className="p-1"
+            >
+              <FiChevronDown className="text-xl text-gray-600" />
+            </motion.div>
+          )}
         </div>
-        {sizes.length > 0 && (
-          <motion.div
-            animate={{ rotate: isSizeExpanded ? 180 : 0 }}
-            className="p-1"
+        {pdfUrl && (
+          <button
+            onClick={handlePdfClick}
+            className="ml-4 flex items-center space-x-2 rounded-md bg-indigo-600 px-3 py-1 text-sm text-white hover:bg-indigo-700"
           >
-            <FiChevronDown className="text-xl text-gray-600" />
-          </motion.div>
+            <FiFileText />
+            <span>View PDF</span>
+          </button>
         )}
       </div>
 
@@ -330,7 +347,7 @@ const ProductLinks = () => {
         <h2 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
           Our Products
         </h2>
-        <div className="rounded-lg  bg-white shadow-sm">
+        <div className="rounded-lg bg-white shadow-sm">
           {Object.entries(products).map(([category, [href, subtypes]]) => (
             <Link
               key={category}
