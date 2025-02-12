@@ -428,9 +428,10 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-            <div className="h-8 w-8">
-              <img src={logo} alt="logo" />
-            </div>
+          <div className="h-14 w-15">
+            <img src={logo} alt="logo" className="h-full w-full"/>
+          </div>
+
             <span className="text-xl font-bold text-black font-serif">SADHGURU TILES & MARBLES</span>
           </Link>   
           <div className="hidden md:flex space-x-8">

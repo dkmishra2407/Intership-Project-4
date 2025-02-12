@@ -32,7 +32,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // import  VerticalAccordion1  from '../components/Tiles_brands';
 import  VerticalAccordion  from '../components/Tiles_supplier';
 const images = [p1, p2, p3, p4,p18,p19];
-const images1 = [p20,p9, p8, p7,p5,p6,p11,p12,p13,p15,p16,p17,p21];
+const images1 = [p20,p9, p8, p7,p5,p6,p11,p12,p13,p15,p17,p21];
 
 const Home = () => {
   useEffect(() => {
