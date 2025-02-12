@@ -198,12 +198,15 @@ const products = {
   "Wall Tiles": ["/products/marbles", ["Bathroom Tiles", "Kitchen Tiles", "Imported"]],
   "Exterior": ["/products/sanitaryware", ["Elevation Glossy"]],
   "Stone Cladding": ["/products/sanitaryware", []],
-  "Marble": ["/products/sanitaryware", []],
-  "Quardsz": ["/products/sanitaryware", []],
+  "Marble": ["/products/sanitaryware", ["Marble"]],
+  "Quardsz": ["/products/sanitaryware", ["Terrazzo Quardsz","Kalinga Quardsz"]],
   "Paints": ["/products/sanitaryware", ["Berger Paints"]],
   "Sanitory Products": ["/products/sanitaryware", ["Essco Sanitary ware","Cera sanitary ware","Kerovit sanitary ware","Nirali BG sanitary ware","Franke Sanitary ware","Elvis sanitary ware"]]
 };
 
+{/* <li><a href="https://drive.google.com/uc?export=download&id=17lDgKnpdPvFLB5MuWsCaa61lZQq0iG5m" download>Download File 1</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&id=1D9w84e9EXdEBU9fk0kJckA47YxQikB01" download>Download File 2</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&id=1nSTmzNp7rq-amvMvwvRFWh4ZxdLdjrK1" download>Download File 3</a></li> */}
 const productsize = {
   "GVT": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800"]],
   "Double Charged": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["600x600", "800x800", "600x1200", "800x1200", "800x1600", "1200x1800","1000x1000"]],
@@ -220,7 +223,10 @@ const productsize = {
   "Nirali BG sanitary ware": ["https://drive.google.com/uc?export=download&id=1kuyuk-r_2IbW9gZbCdJulwG7RmcwzpCs", []],
   "Franke Sanitary ware": [  "https://drive.google.com/uc?export=download&id=1CceVYUXcg0predFcQL8qVD62-uabrILU", []],
   "Elvis sanitary ware": [  "https://drive.google.com/uc?export=download&id=1zZgPZYsplFk0DP9mJwVFjDm8W0g9IYXN", []],
-  "Berger Paints": [ "https://drive.google.com/uc?export=download&id=1-efpeoSoU1r9iJissMMmHbW8zXyq2ni4", []]
+  "Berger Paints": [ "https://drive.google.com/uc?export=download&id=1-efpeoSoU1r9iJissMMmHbW8zXyq2ni4", []],
+  "Terrazzo Quardsz": [  "https://drive.google.com/uc?export=download&id=1nSTmzNp7rq-amvMvwvRFWh4ZxdLdjrK1", []],
+  "Kalinga Quardsz": [  "https://drive.google.com/uc?export=download&id=1D9w84e9EXdEBU9fk0kJckA47YxQikB01", []],
+  "Marble": [  "https://drive.google.com/uc?export=download&id=17lDgKnpdPvFLB5MuWsCaa61lZQq0iG5m", []]
 };
 
 const productsize1 = {
