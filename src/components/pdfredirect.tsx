@@ -200,7 +200,7 @@ const products = {
   "Stone Cladding": ["/products/sanitaryware", []],
   "Marble": ["/products/sanitaryware", []],
   "Quardsz": ["/products/sanitaryware", []],
-  "Paints": ["/products/sanitaryware", ["Verger Paints"]],
+  "Paints": ["/products/sanitaryware", ["Berger Paints"]],
   "Sanitory Products": ["/products/sanitaryware", ["Essco Sanitary ware","Cera sanitary ware","Kerovit sanitary ware","Nirali BG sanitary ware","Franke Sanitary ware","Elvis sanitary ware"]]
 };
 
@@ -220,7 +220,7 @@ const productsize = {
   "Nirali BG sanitary ware": ["https://drive.google.com/uc?export=download&id=1kuyuk-r_2IbW9gZbCdJulwG7RmcwzpCs", []],
   "Franke Sanitary ware": [  "https://drive.google.com/uc?export=download&id=1CceVYUXcg0predFcQL8qVD62-uabrILU", []],
   "Elvis sanitary ware": [  "https://drive.google.com/uc?export=download&id=1zZgPZYsplFk0DP9mJwVFjDm8W0g9IYXN", []],
-  "Verger Paints": [ "https://drive.google.com/uc?export=download&id=1-efpeoSoU1r9iJissMMmHbW8zXyq2ni4", []]
+  "Berger Paints": [ "https://drive.google.com/uc?export=download&id=1-efpeoSoU1r9iJissMMmHbW8zXyq2ni4", []]
 };
 
 const productsize1 = {
