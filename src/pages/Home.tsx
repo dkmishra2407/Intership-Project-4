@@ -21,15 +21,15 @@ import p6 from '../../assets/Collection/9.jpg';
 import p11 from '../../assets/Collection/10.jpg';
 import p12 from '../../assets/Collection/11.jpg';
 import p13 from '../../assets/Collection/12.jpg';
-import p14 from '../../assets/Collection/13.jpg';
+// import p14 from '../../assets/Collection/13.jpg';
 import p15 from '../../assets/Collection/14.jpg';
 import p16 from '../../assets/Collection/15.jpg';
 import p17 from '../../assets/Collection/16.jpg';
 import p18 from '../../assets/Collection/17.jpg';
 // import  VerticalAccordion1  from '../components/Tiles_brands';
 import  VerticalAccordion  from '../components/Tiles_supplier';
-const images = [p1, p2, p3, p4];
-const images1 = [p10, p9, p8, p7,p5,p6,p11,p12,p13,p14,p15,p16,p17,p18];
+const images = [p1, p2, p3, p4,p18];
+const images1 = [p9, p8, p7,p5,p6,p11,p12,p13,p15,p16,p17];
 
 
 const Home = () => {
