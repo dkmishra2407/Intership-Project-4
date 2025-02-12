@@ -405,7 +405,7 @@ const ProductLinks = () => {
             <Link
               key={category}
               heading={category}
-              subheading="SadhGuru Tiles"
+              subheading="Sadhguru Tiles"
               href={href}
               subtypes={subtypes}
             />

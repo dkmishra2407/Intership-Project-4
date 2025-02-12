@@ -8,7 +8,7 @@ const Contact = () => {
 
   const handleApplyClick = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:Sadgurutiles@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:sadhgurutiles@gmail.com?subject=${encodeURIComponent(
       'Application from ' + name
     )}&body=${encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
@@ -92,7 +92,7 @@ const Contact = () => {
                   <Mail className="text-blue-600" />
                   <div>
                     <h4 className="font-medium text-black">Email</h4>
-                    <p className="text-gray-700">Sadgurutiles@gmail.com</p>
+                    <p className="text-gray-700">sadhgurutiles@gmail.com</p>
                   </div>
                 </div>
 

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-start gap-4">
-            <h3 className="text-2xl font-bold">SadhGuru Tiles</h3>
+            <h3 className="text-2xl font-bold">Sadhguru Tiles</h3>
             <p className="text-gray-400">Premium quality tiles for your dream spaces.</p>
             <img src={logo} alt="Company Logo" className="w-40 mt-4 rounded-lg" />
           </div>
@@ -66,8 +66,8 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} SadhGuru Tiles. All rights reserved.</p>
-          <p className="text-sm mt-2">Developed by Digitecnosol</p>
+          <p>&copy; {new Date().getFullYear()} Sadhguru Tiles. All rights reserved.</p>
+          <p className="text-sm mt-2">Developed by Digitechnosol</p>
         </div>
       </div>
     </footer>

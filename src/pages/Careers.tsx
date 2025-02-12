@@ -40,7 +40,7 @@ const Careers = () => {
   ];
 
   const handleApplyClick = (jobTitle) => {
-    const mailtoLink = `mailto:Sadgurutiles@gmail.com?subject=Application for ${encodeURIComponent(
+    const mailtoLink = `mailto:sadhgurutiles@gmail.com?subject=Application for ${encodeURIComponent(
       jobTitle
     )}&body=Dear HR,%0D%0A%0D%0AI am writing to apply for the position of ${encodeURIComponent(jobTitle)}. Please find my resume attached.%0D%0A%0D%0AThank you.%0D%0A%0D%0ABest regards,%0D%0A[Your Name]`;
 
