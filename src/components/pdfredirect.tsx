@@ -220,7 +220,7 @@ const productsize = {
   "Nirali BG sanitary ware": ["https://drive.google.com/uc?export=download&id=1kuyuk-r_2IbW9gZbCdJulwG7RmcwzpCs", []],
   "Franke Sanitary ware": [  "https://drive.google.com/uc?export=download&id=1CceVYUXcg0predFcQL8qVD62-uabrILU", []],
   "Elvis sanitary ware": [  "https://drive.google.com/uc?export=download&id=1zZgPZYsplFk0DP9mJwVFjDm8W0g9IYXN", []],
-  "verger Paints": [ "https://drive.google.com/uc?export=download&id=1-efpeoSoU1r9iJissMMmHbW8zXyq2ni4", []],
+  "Verger Paints": [ "https://drive.google.com/uc?export=download&id=1-efpeoSoU1r9iJissMMmHbW8zXyq2ni4", []]
 };
 
 const productsize1 = {
