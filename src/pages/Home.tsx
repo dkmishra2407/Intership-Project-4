@@ -18,9 +18,18 @@ import p8 from '../../assets/Collection/6.jpg';
 import p7 from '../../assets/Collection/7.jpg';
 import p5 from '../../assets/Collection/8.jpg';
 import p6 from '../../assets/Collection/9.jpg';
+import p11 from '../../assets/Collection/10.jpg';
+import p12 from '../../assets/Collection/11.jpg';
+import p13 from '../../assets/Collection/12.jpg';
+import p14 from '../../assets/Collection/13.jpg';
+import p15 from '../../assets/Collection/14.jpg';
+import p16 from '../../assets/Collection/15.jpg';
+import p17 from '../../assets/Collection/16.jpg';
+import p18 from '../../assets/Collection/17.jpg';
+// import  VerticalAccordion1  from '../components/Tiles_brands';
 import  VerticalAccordion  from '../components/Tiles_supplier';
 const images = [p1, p2, p3, p4];
-const images1 = [p10, p9, p8, p7,p5,p6];
+const images1 = [p10, p9, p8, p7,p5,p6,p11,p12,p13,p14,p15,p16,p17,p18];
 
 
 const Home = () => {
@@ -138,9 +147,22 @@ const Home = () => {
         </div>
       </section>
 
+      <section className='py-16 bg-white' data-aos="fade-left">
+      <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
+        Authorised Tiles Suppliers
+      </h2>
+      <div className="grid grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {images1.map((img, index) => (
+          <div key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
+            <img src={img} alt={`Client ${index + 1}`} className="w-full h-auto object-cover rounded-md" />
+          </div>
+        ))}
+      </div>
+      </section>
+
       <section className='py-16 bg-white' data-aos="fade-right">
       <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
-          Authorised Tiles Suppliers
+          Authorised Bathware Brands 
       </h2>
       {/* <VerticalAccordion1/> */}
       <div className="bg-white py-10 px-5">
@@ -153,19 +175,7 @@ const Home = () => {
       </div>
     </div>
       </section>
-
-      <section className='py-16 bg-white' data-aos="fade-left">
-      <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
-        Authorised Bathware Brands 
-      </h2>
-      <div className="grid grid-cols-4 gap-4 max-w-6xl mx-auto">
-        {images1.map((img, index) => (
-          <div key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
-            <img src={img} alt={`Client ${index + 1}`} className="w-full h-auto object-cover rounded-md" />
-          </div>
-        ))}
-      </div>
-      </section>
+      
       {/* Map Section */}
       <section className="py-16 bg-white" data-aos="fade-in">
         <div className="container mx-auto px-4">
