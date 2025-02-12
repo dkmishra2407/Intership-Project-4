@@ -213,26 +213,34 @@ const productsize = {
   "Kitchen Tiles": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x450", "300x600", "300x500", "600x1200"]],
   "Imported": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x300", "400x400", "600x600", "800x800"]],
   "Elevation Glossy": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", ["300x600", "300x450"]],
-  "Essco Sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
-  "Cera sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
-  "Kerovit sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
-  "Nirali BG sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
-  "Franke Sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []],
-  "Elvis sanitary ware": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw", []]
+  
+  "Essco Sanitary ware": [  "https://drive.google.com/uc?export=download&id=1XKPEs1zAouy_jTOtjrkqbH4kcMlZKaNa",[]],
+  "Cera sanitary ware": ["https://drive.google.com/uc?export=download&id=18k652ck3VM5LcAHjfYIniW2yEzBQO3hb", []],
+  "Kerovit sanitary ware": [  "https://drive.google.com/uc?export=download&id=18Jq1zezJmG4XS9ZHUh-Pm16052UZIsPY", []],
+  "Nirali BG sanitary ware": ["https://drive.google.com/uc?export=download&id=1kuyuk-r_2IbW9gZbCdJulwG7RmcwzpCs", []],
+  "Franke Sanitary ware": [  "https://drive.google.com/uc?export=download&id=1CceVYUXcg0predFcQL8qVD62-uabrILU", []],
+  "Elvis sanitary ware": [  "https://drive.google.com/uc?export=download&id=1zZgPZYsplFk0DP9mJwVFjDm8W0g9IYXN", []]
 };
 
 const productsize1 = {
-  "GVT 600x600": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "GVT 800x800": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "GVT 600x1200": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "GVT 800x1200": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "GVT 800x1600": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "GVT 1200x1800": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "Double Charged 600x600": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "Double Charged 800x800": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
-  "Double Charged 600x1200": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"]
+  "GVT 600x600": [  "https://drive.google.com/uc?export=download&id=1MLb73jW_X9ulPRL7fFsDrRYk6LJg5ThN"],
+  "GVT 800x800": [  "https://drive.google.com/uc?export=download&id=1MLb73jW_X9ulPRL7fFsDrRYk6LJg5ThN"],
+  "GVT 600x1200": [  "https://drive.google.com/uc?export=download&id=1Uf3ezDVKCaMN2XwQcAQqhBhInypVcDr9"],
+  "GVT 800x1200": [  "https://drive.google.com/uc?export=download&id=1MLb73jW_X9ulPRL7fFsDrRYk6LJg5ThN"],
+  "GVT 800x1600": [  "https://drive.google.com/uc?export=download&id=1MLb73jW_X9ulPRL7fFsDrRYk6LJg5ThN"  ],
+  "GVT 1000x1000": [  "https://drive.google.com/uc?export=download&id=1nARFd_PXrCThSJ37obVFyTwYaMfkWpdu"  ],
+  "GVT 1200x1800": [  "https://drive.google.com/uc?export=download&id=1-IRrmm7mZZNfUeQlz44KmhXNIDSR5zCg"],
+  // "Double Charged 600x600": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  // "Double Charged 800x800": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"],
+  // "Double Charged 600x1200": ["https://drive.google.com/uc?export=download&id=1ZvTUmJUiRsNtVEDOQ912Ixp5uqwWWozw"]
 };
 
+// const links = [
+//   "https://drive.google.com/uc?export=download&id=1-IRrmm7mZZNfUeQlz44KmhXNIDSR5zCg"
+//   "https://drive.google.com/uc?export=download&id=1MLb73jW_X9ulPRL7fFsDrRYk6LJg5ThN"
+//   "https://drive.google.com/uc?export=download&id=1Uf3ezDVKCaMN2XwQcAQqhBhInypVcDr9",
+//   "https://drive.google.com/uc?export=download&id=1nARFd_PXrCThSJ37obVFyTwYaMfkWpdu"
+// ];
 const SizeLink = ({ subtype, size }) => {
   const pdfKey = `${subtype} ${size}`;
   const pdfUrl = productsize1[pdfKey]?.[0];
