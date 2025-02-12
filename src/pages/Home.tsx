@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Download, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import image1 from '../../assets/Slider/---a-beautifully-designed-hero-banner-showcasing-h (1).jpg';
@@ -26,11 +25,14 @@ import p15 from '../../assets/Collection/14.jpg';
 import p16 from '../../assets/Collection/15.jpg';
 import p17 from '../../assets/Collection/16.jpg';
 import p18 from '../../assets/Collection/17.jpg';
+import p19 from '../../assets/Collection/18.jpg';
+import p20 from '../../assets/Collection/19.jpg';
+import p21 from '../../assets/Collection/20.jpg';
+import { Link, useNavigate } from 'react-router-dom';
 // import  VerticalAccordion1  from '../components/Tiles_brands';
 import  VerticalAccordion  from '../components/Tiles_supplier';
-const images = [p1, p2, p3, p4,p18];
-const images1 = [p9, p8, p7,p5,p6,p11,p12,p13,p15,p16,p17];
-
+const images = [p1, p2, p3, p4,p18,p19];
+const images1 = [p20,p9, p8, p7,p5,p6,p11,p12,p13,p15,p16,p17,p21];
 
 const Home = () => {
   useEffect(() => {
@@ -42,8 +44,11 @@ const Home = () => {
     window.open(pdfPath, '_blank');
   };
 
-  const handleExplore = () => {
-    console.log('Exploring products...');
+  const navigate = useNavigate();
+
+  const handleExplore1 = () => {
+    // Add any additional logic you need before navigation
+    navigate('/products');
   };
 
   return (
@@ -66,7 +71,7 @@ const Home = () => {
             </p>
             <Link to="/products">
               <button
-                onClick={handleExplore}
+                onClick={handleExplore1}
                 className="bg-blue-600 text-white px-10 py-4 rounded-lg hover:bg-blue-700 inline-flex items-center gap-3 transition-colors text-lg font-semibold"
               >
                 Explore Products <ArrowRight size={24} />
@@ -116,7 +121,7 @@ const Home = () => {
                     {collection.description}
                   </p>
                   <button
-                    onClick={handleExplore}
+                    onClick={handleExplore1}
                     className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center gap-2 transition-colors"
                   >
                     View Collection <ArrowRight size={20} />
