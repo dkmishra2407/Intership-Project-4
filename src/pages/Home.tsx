@@ -148,33 +148,40 @@ const Home = () => {
       </section>
 
       <section className='py-16 bg-white' data-aos="fade-left">
-      <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
-        Authorised Tiles Suppliers
-      </h2>
-      <div className="grid grid-cols-4 gap-4 max-w-6xl mx-auto">
-        {images1.map((img, index) => (
-          <div key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
-            <img src={img} alt={`Client ${index + 1}`} className="w-full h-auto object-cover rounded-md" />
-          </div>
-        ))}
+  <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif text-center">
+    Authorised Tiles Suppliers
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+    {images1.map((img, index) => (
+      <div key={index} className="p-4 bg-white rounded-lg shadow-md flex items-center justify-center">
+        <img 
+          src={img} 
+          alt={`Client ${index + 1}`} 
+          className="w-full h-48 object-contain rounded-md" 
+        />
       </div>
-      </section>
+    ))}
+  </div>
+</section>
 
-      <section className='py-16 bg-white' data-aos="fade-right">
-      <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif flex justify-center">
-          Authorised Bathware Brands 
-      </h2>
-      {/* <VerticalAccordion1/> */}
-      <div className="bg-white py-10 px-5">
-      <div className="grid grid-cols-4 gap-4 max-w-6xl mx-auto">
-        {images.map((img, index) => (
-          <div key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
-            <img src={img} alt={`Client ${index + 1}`} className="w-full h-auto object-cover rounded-md" />
-          </div>
-        ))}
-      </div>
+<section className='py-16 bg-white' data-aos="fade-right">
+  <h2 className="text-4xl font-extrabold mb-6 text-blue-800 font-serif text-center">
+    Authorised Bathware Brands 
+  </h2>
+  <div className="px-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      {images.map((img, index) => (
+        <div key={index} className="p-4 bg-white rounded-lg shadow-md flex items-center justify-center">
+          <img 
+            src={img} 
+            alt={`Client ${index + 1}`} 
+            className="w-full h-48 object-contain rounded-md"
+          />
+        </div>
+      ))}
     </div>
-      </section>
+  </div>
+</section>
       
       {/* Map Section */}
       <section className="py-16 bg-white" data-aos="fade-in">

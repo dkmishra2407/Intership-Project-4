@@ -431,9 +431,8 @@ const Header = () => {
             <div className="h-8 w-8">
               <img src={logo} alt="logo" />
             </div>
-            <span className="text-xl font-bold text-black">SadhGuru Tiles & Marbles</span>
-          </Link>
-
+            <span className="text-xl font-bold text-black font-serif">SADHGURU TILES & MARBLES</span>
+          </Link>   
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <Link
