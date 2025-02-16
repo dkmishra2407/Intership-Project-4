@@ -39,12 +39,12 @@ const Home = () => {
     AOS.init({ duration: 1200 }); // Initialize AOS with desired settings
   }, []);
 
-  const handleDownload = () => {
-    const pdfPath = '/assets/Wall_Tiles_Catalogue/Stone_Cladding.pdf';
-    window.open(pdfPath, '_blank');
-  };
-
+  
   const navigate = useNavigate();
+
+  const handleDownload = () => {
+    navigate('/products')
+  };
 
   const handleExplore1 = () => {
     // Add any additional logic you need before navigation
